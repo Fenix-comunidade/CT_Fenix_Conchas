@@ -9,7 +9,7 @@
     <meta name="author" content="Leandro">
     <title>Fênix Comunidade Terapêutica</title>
 
-    <!-- Ícone do WhatsApp (via CDN) -->
+    <!-- Ícone do WhatsApp -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
     <style>
@@ -60,10 +60,26 @@
             margin-right: 8px;
         }
 
+        .map-container {
+            margin-top: 40px;
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
         footer {
             margin-top: 40px;
             font-size: 0.9rem;
             color: #aaa;
+            text-align: center;
         }
     </style>
 </head>
@@ -87,6 +103,16 @@
         <a class="whatsapp-button" href="https://web.whatsapp.com/send?phone=5514997422319" target="_blank">
             <i class="fab fa-whatsapp"></i>14 99742-2319
         </a>
+
+        <h2>Localização</h2>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps?q=Rodovia%20Marechal%20Rondon%20km%20197,%20Bairro%20Lopes,%20Conchas%20SP&output=embed"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
     </div>
 
     <footer>
