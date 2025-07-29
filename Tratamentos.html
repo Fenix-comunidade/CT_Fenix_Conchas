@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tratamentos - Fênix</title>
+  <meta name="description" content="Tratamentos oferecidos na Fênix Comunidade Terapêutica">
+  <meta name="author" content="Leandro">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    header {
+      background-color: #000;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      color: #00ffcc;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #00ffcc;
+      margin-bottom: 30px;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #00cc99;
+      margin-top: 20px;
+    }
+
+    p {
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #aaa;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #000;
+        padding: 10px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Fênix</div>
+    <i class="fas fa-bars menu-toggle" onclick="toggleMenu()"></i>
+    <nav id="nav-menu">
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="tratamentos.html">Tratamentos</a>
+      <a href="fotos.html">Fotos</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Tratamentos</h1>
+
+    <section>
+      <h2>Tipos de Dependência Tratados</h2>
+      <p>
+        Nossa clínica oferece tratamento especializado para dependência de álcool, crack, cocaína, maconha, medicamentos controlados e outras substâncias psicoativas. Cada caso é avaliado individualmente para oferecer o melhor cuidado possível.
+      </p>
+    </section>
+
+    <section>
+      <h2>Abordagem Terapêutica</h2>
+      <p>
+        Utilizamos um modelo terapêutico baseado na abordagem biopsicossocial, envolvendo acompanhamento médico, psicológico, social e espiritual. São aplicadas terapias em grupo, atividades ocupacionais, grupos de apoio, espiritualidade e rotinas que visam o fortalecimento pessoal.
+      </p>
+    </section>
+
+    <section>
+      <h2>Duração do Tratamento</h2>
+      <p>
+        A duração média do programa terapêutico varia de 3 a 6 meses, podendo ser ajustada conforme o desenvolvimento do paciente e recomendação da equipe técnica. O tempo é fundamental para promover mudanças reais e sustentáveis.
+      </p>
+    </section>
+
+    <section>
+      <h2>Equipe Multidisciplinar</h2>
+      <p>
+        Contamos com uma equipe formada por terapeutas, conselheiros e monitores, todos preparados para oferecer um atendimento humanizado e eficaz durante toda a jornada de recuperação.
+      </p>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Fênix Comunidade Terapêutica | Desenvolvido por Leandro
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-menu');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
