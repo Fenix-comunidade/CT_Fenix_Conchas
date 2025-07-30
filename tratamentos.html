@@ -124,18 +124,27 @@
   gtag('js', new Date());
 
   gtag('config', 'G-7YCJTP318E');
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("nav-menu");
+    nav.classList.toggle("active");
+  }
 </script>
- <nav>
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-  <div class="menu-links" id="menuLinks">
-
   </div>
 </nav>
 
 <body>
   <header>
-     <div class="logo">
-  <img src="logo fenix.jpg" alt="Logotipo Fênix">
+  <div class="logo">
+    <img src="logo fenix.jpg" alt="Logotipo Fênix">
+  </div>
+  <i class="fas fa-bars menu-toggle" onclick="toggleMenu()">☰</i>
+  <nav id="nav-menu">
+    <a href="index.html">Início</a>
+    <a href="tratamentos.html">Tratamentos</a>
+    <a href="fotos.html">Fotos</a>
+  </nav>
+</header>
 </div>
     <i class="fas fa-bars menu-toggle" onclick="toggleMenu()"></i>
     <nav id="nav-menu">
