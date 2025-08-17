@@ -10,9 +10,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
@@ -20,6 +18,31 @@
             background-color: #111;
             color: #fff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Marca d’água centralizada e responsiva */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40vw;
+            max-width: 400px;
+            height: auto;
+            background: url("logo fenix.jpg") no-repeat center center;
+            background-size: contain;
+            opacity: 0.07;
+            z-index: -1;
+            pointer-events: none;
+        }
+        @media (max-width: 768px) {
+            body::before { width: 50vw; max-width: 250px; }
+        }
+        @media (max-width: 480px) {
+            body::before { width: 60vw; max-width: 150px; }
         }
 
         header {
@@ -30,42 +53,11 @@
             align-items: center;
         }
 
-        .logo {
-            font-size: 1.2rem;
-            color: #00ffcc;
-            font-weight: bold;
-        }
-         /* Marca d’água centralizada */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url("logo fenix.jpg") no-repeat center center;
-            background-size: 300px;
-            opacity: 0.07;
-            z-index: -1;
-            pointer-events: none;
-        }
-        /* Ajustes para telas menores */
-@media (max-width: 768px) {
-    body::before { width: 50vw; max-width: 250px; }
-}
-@media (max-width: 480px) {
-    body::before { width: 60vw; max-width: 150px; }
-}
-        nav {
-            display: flex;
-            gap: 15px;
-        }
+        .logo img { height: 60px; width: auto; }
+        .logo { display: flex; align-items: center; }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-        }
+        nav { display: flex; gap: 15px; }
+        nav a { color: white; text-decoration: none; font-size: 1rem; }
 
         .menu-toggle {
             display: none;
@@ -119,39 +111,17 @@
                 padding: 10px;
             }
 
-            nav.active {
-                display: flex;
-            }
+            nav.active { display: flex; }
 
-            .menu-toggle {
-                display: block;
-            }
+            .menu-toggle { display: block; }
         }
-         .logo img {
-    height: 60px;
-    width: auto;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
     </style>
 </head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7YCJTP318E"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7YCJTP318E');
-</script>
 <body>
     <header>
-          <div class="logo">
-  <img src="logo fenix.jpg" alt="Logotipo Fênix">
-</div>
+        <div class="logo">
+            <img src="logo fenix.jpg" alt="Logotipo Fênix">
+        </div>
         <i class="fas fa-bars menu-toggle" onclick="toggleMenu()"></i>
         <nav id="nav-menu">
             <a href="index.html">Início</a>
