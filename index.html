@@ -11,9 +11,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
@@ -33,24 +31,19 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: img src="logo-fenix.jpg" no-repeat center center;
-            background-size: 300px;   /* tamanho padrão */
-            opacity: 0.07;            /* transparência suave */
-            z-index: -1;              /* atrás de todo o conteúdo */
-            pointer-events: none;     /* não atrapalha cliques */
+            background: url("logo-fenix.png") no-repeat center center;
+            background-size: 300px;
+            opacity: 0.07;
+            z-index: -1;
+            pointer-events: none;
         }
 
         /* Responsividade da marca d’água */
         @media (max-width: 768px) {
-            body::before {
-                background-size: 200px; /* tamanho menor em tablets */
-            }
+            body::before { background-size: 200px; }
         }
-
         @media (max-width: 480px) {
-            body::before {
-                background-size: 150px; /* tamanho ainda menor em celulares */
-            }
+            body::before { background-size: 150px; }
         }
 
         header {
@@ -61,22 +54,11 @@
             align-items: center;
         }
 
-        .logo {
-            font-size: 1.2rem;
-            color: #00ffcc;
-            font-weight: bold;
-        }
+        .logo img { height: 60px; width: auto; }
+        .logo { display: flex; align-items: center; }
 
-        nav {
-            display: flex;
-            gap: 15px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-        }
+        nav { display: flex; gap: 15px; }
+        nav a { color: white; text-decoration: none; font-size: 1rem; }
 
         .menu-toggle {
             display: none;
@@ -92,14 +74,8 @@
             text-align: center;
         }
 
-        h1 {
-            font-size: 2rem;
-            color: #00ffcc;
-        }
-
-        h2, h3, h4, h5 {
-            margin: 10px 0;
-        }
+        h1 { font-size: 2rem; color: #00ffcc; }
+        h2, h3, h4, h5 { margin: 10px 0; }
 
         .whatsapp-button {
             display: inline-block;
@@ -117,13 +93,8 @@
             text-align: center;
         }
 
-        .whatsapp-button:hover {
-            background-color: #1ebf57;
-        }
-
-        .whatsapp-button i {
-            margin-right: 8px;
-        }
+        .whatsapp-button:hover { background-color: #1ebf57; }
+        .whatsapp-button i { margin-right: 8px; }
 
         .map-container {
             margin-top: 30px;
@@ -153,43 +124,12 @@
 
         /* Responsivo */
         @media (max-width: 768px) {
-            nav {
-                display: none;
-                flex-direction: column;
-                gap: 10px;
-                background-color: #000;
-                padding: 10px;
-            }
-
-            nav.active {
-                display: flex;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-        }
-
-        .logo img {
-            height: 60px;
-            width: auto;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
+            nav { display: none; flex-direction: column; gap: 10px; background-color: #000; padding: 10px; }
+            nav.active { display: flex; }
+            .menu-toggle { display: block; }
         }
     </style>
 </head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7YCJTP318E"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7YCJTP318E');
-</script>
 <body>
     <header>
         <div class="logo">
@@ -230,26 +170,16 @@
         </a>
 
         <section>
-          <h2>Localização</h2>
-          <p>
-            Estamos localizados na <strong>Rodovia Marechal Rondon, km 197 - Bairro Lopes - Conchas, SP</strong>.
-          </p>
-          <p>
-            <a href="https://www.google.com/maps/place/Rodovia+Marechal+Rondon,+km+197+-+Conchas,+SP/@-23.0148416,-48.0248023,17z" target="_blank" style="color: #00ffcc; text-decoration: underline;">
-              📍 Ver no Google Maps
-            </a>
-          </p>
+            <h2>Localização</h2>
+            <p>Estamos localizados na <strong>Rodovia Marechal Rondon, km 197 - Bairro Lopes - Conchas, SP</strong>.</p>
+            <p><a href="https://www.google.com/maps/place/Rodovia+Marechal+Rondon,+km+197+-+Conchas,+SP" target="_blank" style="color: #00ffcc; text-decoration: underline;">📍 Ver no Google Maps</a></p>
 
-          <iframe
-            src="https://www.google.com/maps?q=Rodovia+Marechal+Rondon,+km+197+-+Conchas,+SP&output=embed"
-            width="100%"
-            height="300"
-            style="border:0;"
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+            <iframe class="map-container"
+                src="https://www.google.com/maps?q=Rodovia+Marechal+Rondon,+km+197+-+Conchas,+SP&output=embed"
+                width="100%" height="300" style="border:0;" allowfullscreen loading="lazy">
+            </iframe>
         </section>
-        
+
         <footer>
             &copy; 2025 Fênix Comunidade Terapêutica | Desenvolvido por Leandro
         </footer>
@@ -263,8 +193,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
