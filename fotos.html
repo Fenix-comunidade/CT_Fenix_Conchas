@@ -49,6 +49,13 @@
             z-index: -1;
             pointer-events: none;
         }
+        /* Ajustes para telas menores */
+@media (max-width: 768px) {
+    body::before { width: 50vw; max-width: 250px; }
+}
+@media (max-width: 480px) {
+    body::before { width: 60vw; max-width: 150px; }
+}
         nav {
             display: flex;
             gap: 15px;
